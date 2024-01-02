@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useState } from 'react'
 import {
   styled,
@@ -26,6 +27,7 @@ import {
   Dashboard as DashboardIcon,
   TableView as TableViewIcon,
 } from '@mui/icons-material'
+import { useNavigate } from '@remix-run/react'
 
 const drawerWidth = 240
 const defaultTheme = createTheme()
@@ -36,9 +38,14 @@ const defaultMenus: MenuProps[] = [
     path: 'dashboard',
   },
   {
-    name: 'oppertunity',
+    name: 'opportunity',
     icon: <TableViewIcon />,
-    path: 'oppertunity',
+    path: 'opportunity',
+  },
+  {
+    name: 'order',
+    icon: <TableViewIcon />,
+    path: 'order',
   },
 ]
 
@@ -98,11 +105,11 @@ const Drawer = styled(MuiDrawer, {
 }))
 
 const Menus = ({ data }: { data: MenuProps[] }) => {
-  console.log(data)
+  const navigate = useNavigate()
   return (
     <>
       {data.map((menu) => (
-        <ListItemButton key={menu.name}>
+        <ListItemButton key={menu.name} onClick={() => navigate(`/${menu.path}`)}>
           <ListItemIcon>{menu.icon}</ListItemIcon>
           <ListItemText primary={menu.name} />
         </ListItemButton>

@@ -1,5 +1,10 @@
 const CopyRight = () => {
-  return <p>© 2023, made with by Creative Tim for a better web.</p>;
-};
+  return (
+    <p>
+      <span className="icon-[ph--copyright-light]" />
+      2024, made with by Creative firestige for fun.
+    </p>
+  )
+}
 
-export default CopyRight;
+export default CopyRight

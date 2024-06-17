@@ -24,6 +24,7 @@
   "devDependencies": {
     "@iconify-json/material-symbols": "^1.1.82",
     "@iconify-json/mdi": "^1.1.66",
+    "@iconify-json/ph": "^1.1.13",
     "@iconify/tailwind": "^1.1.1",
     "@remix-run/dev": "^2.9.2",
     "@types/react": "^18.2.20",

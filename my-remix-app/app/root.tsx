@@ -25,7 +25,6 @@ export function Layout(props: { children: ReactNode }) {
         {props.children}
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   )

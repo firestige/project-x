@@ -10,11 +10,11 @@ export interface IconButtonProps {
 
 const IconButton = (props: IconButtonProps) => {
   const { icon, className, fontSize, onClick, children } = props
-  const generateIconClass = () =>
-    fontSize === undefined ? `icon-[${icon}]` : `icon-[${icon}] ${fontSize}`
+  const iconClass =
+    fontSize === undefined ? `iconify ${icon}` : `iconify ${icon} ${fontSize}`
   return (
-    <button className={className ?? ''} onClick={onClick}>
-      <span className={generateIconClass()} />
+    <button className={className ?? ''} onClick={onClick} type="button">
+      <span className={iconClass} />
       {children}
     </button>
   )

@@ -5,14 +5,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
-import stylesheet from "~/tailwind.css?url";
-import MainLayout from "./layouts";
+} from '@remix-run/react'
+import type { LinksFunction } from '@remix-run/node'
+import stylesheet from '~/tailwind.css?url'
+import MainLayout from './layouts'
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
-];
+  { rel: 'stylesheet', href: stylesheet },
+]
 
 export function Layout(props: { children: ReactNode }) {
   return (
@@ -21,14 +21,14 @@ export function Layout(props: { children: ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="h-screen overflow-hidden flex items-center justify-center">
+      <body className="flex h-screen items-center justify-center overflow-hidden">
         {props.children}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }
 
 export default function App() {
@@ -36,5 +36,5 @@ export default function App() {
     <MainLayout>
       <Outlet />
     </MainLayout>
-  );
+  )
 }

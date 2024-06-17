@@ -1,16 +1,17 @@
-import Breadcrumb from "~/components/Breadcrumb";
-import TextInputField from "~/components/TextInputField";
+import Breadcrumb from '~/components/Breadcrumb'
+import IconButton from '~/components/IconButton'
+import TextInputField from '~/components/TextInputField'
 
 const NavSection = () => {
   return (
     <div className="capitalize">
       <Breadcrumb />
-      <h6 className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-gray-900">
+      <h6 className="block font-sans text-base font-semibold leading-relaxed tracking-normal text-gray-900 antialiased">
         Home
       </h6>
     </div>
-  );
-};
+  )
+}
 
 const SearchSection = () => {
   return (
@@ -20,17 +21,17 @@ const SearchSection = () => {
       </div>
 
       <button
-        className="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 grid xl:hidden"
+        className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative grid h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none xl:hidden"
         type="button"
       >
-        <span className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
             aria-hidden="true"
             strokeWidth="3"
-            className="h-6 w-6 text-blue-gray-500"
+            className="text-blue-gray-500 h-6 w-6"
           >
             <path
               fillRule="evenodd"
@@ -41,42 +42,58 @@ const SearchSection = () => {
         </span>
       </button>
     </>
-  );
-};
+  )
+}
 
 const NotificationsSection = () => {
   return (
     <div>
       <button
-        className="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30"
+        className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button"
       >
-        <span className="icon-[mdi--notifications] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2" />
+        <span className="icon-[mdi--notifications] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform" />
       </button>
       <button
-        className="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30"
+        className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button"
       >
-        <span className="icon-[mdi--person] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"></span>
+        <span className="icon-[mdi--person] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"></span>
       </button>
     </div>
-  );
-};
+  )
+}
 
-const Header = () => {
+export interface HeaderProps {
+  toggle: () => void
+}
+
+const Header = (props: HeaderProps) => {
+  const { toggle } = props
   return (
-    <nav className="block w-full max-w-full bg-transparent text-white shadow-none rounded-xl transition-all px-0 py-1">
+    <nav className="block w-full max-w-full rounded-xl bg-transparent px-0 py-1 text-white shadow-none transition-all">
       <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
+        <div className="flex-none">
+          <IconButton
+            icon="mdi--menu"
+            fontSize="text-3xl"
+            onClick={toggle}
+            className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          />
+        </div>
         <div className="capitalize">
           <NavSection />
         </div>
+        <div className="grow" />
         <div className="flex items-center">
           <SearchSection />
+        </div>
+        <div id="nav-btn-group">
           <NotificationsSection />
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

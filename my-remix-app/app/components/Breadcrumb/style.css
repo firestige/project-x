@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+    .breadcrumb-delimiter {
+        @apply pointer-events-none mx-2 select-none font-sans text-sm font-normal leading-normal text-gray-500 antialiased
+    }
+    .breadcrumb-item {
+        @apply block font-sans text-sm font-normal leading-normal text-blue-900 antialiased opacity-50 transition-all hover:text-blue-500 hover:opacity-100
+    }
+}

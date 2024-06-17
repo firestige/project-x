@@ -5,7 +5,7 @@ import TextInputField from '~/components/TextInputField'
 const NavSection = () => {
   return (
     <div className="capitalize">
-      <Breadcrumb />
+      <Breadcrumb path="home/dashboard" delimiter="/" />
       <h6 className="block font-sans text-base font-semibold leading-relaxed tracking-normal text-gray-900 antialiased">
         Home
       </h6>
@@ -47,20 +47,33 @@ const SearchSection = () => {
 
 const NotificationsSection = () => {
   return (
-    <div>
-      <button
+    <>
+      <IconButton
+        icon="iconify mdi--notifications"
+        fontSize="text-3xl"
         className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button"
-      >
-        <span className="icon-[mdi--notifications] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform" />
-      </button>
-      <button
+      />
+      <IconButton
+        icon="iconify mdi--person"
+        fontSize="text-3xl"
         className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button"
-      >
-        <span className="icon-[mdi--person] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"></span>
-      </button>
-    </div>
+      />
+    </>
+
+    // <div>
+    //   <button
+    //     className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    //     type="button"
+    //   >
+    //     <span className="icon-[mdi--notifications] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform" />
+    //   </button>
+    //   <button
+    //     className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    //     type="button"
+    //   >
+    //     <span className="icon-[mdi--person] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"></span>
+    //   </button>
+    // </div>
   )
 }
 

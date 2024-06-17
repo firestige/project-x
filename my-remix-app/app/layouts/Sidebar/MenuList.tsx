@@ -1,4 +1,5 @@
 import { NavLink } from '@remix-run/react'
+import IconButton from '~/components/IconButton'
 
 export interface MenuItemProps {
   title: string
@@ -11,17 +12,17 @@ const MenuItem = (props: { item: MenuItemProps }) => {
   return (
     <NavLink to={to}>
       {({ isActive, isPending }) => (
-        <button
+        <IconButton
+          icon={icon}
+          fontSize="text-3xl"
           className={
             isActive ? 'sidebar-nav-btn active' : 'sidebar-nav-btn pending'
           }
-          type="button"
         >
-          <span className={icon} />
           <p className="block font-sans text-base font-medium capitalize leading-relaxed text-inherit antialiased">
             {title}
           </p>
-        </button>
+        </IconButton>
       )}
     </NavLink>
   )

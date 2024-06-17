@@ -6,5 +6,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [addIconSelectors(['mdi', 'material-symbols', 'ph'])],
+  plugins: [
+    addIconSelectors(['mdi', 'material-symbols', 'ph', 'ion', 'solar']),
+  ],
 } satisfies Config

@@ -5,6 +5,11 @@ export const MENU_LIST = [
     title: 'Dashboard',
   },
   {
+    icon: 'ion--library',
+    to: '/library',
+    title: 'Library',
+  },
+  {
     icon: 'mdi--gear',
     to: '/setting',
     title: 'setting',

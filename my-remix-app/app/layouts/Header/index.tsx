@@ -94,9 +94,7 @@ const Header = (props: HeaderProps) => {
             className="middle none hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 relative h-10 max-h-[40px] w-10 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-gray-500 transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           />
         </div>
-        <div className="capitalize">
-          <NavSection />
-        </div>
+
         <div className="grow" />
         <div className="flex items-center">
           <SearchSection />
@@ -104,6 +102,9 @@ const Header = (props: HeaderProps) => {
         <div id="nav-btn-group">
           <NotificationsSection />
         </div>
+      </div>
+      <div className="capitalize">
+        <NavSection />
       </div>
     </nav>
   )

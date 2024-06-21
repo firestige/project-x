@@ -33,6 +33,7 @@ const Grid: React.FC<GridLayoutProps & { children?: React.ReactNode }> = (
       layouts={{ lg: generateLayout(props.items) }}
       className="layout"
       rowHeight={props.rowHeight}
+      maxRows={5}
     >
       {props.children}
     </ResponsiveGridLayout>

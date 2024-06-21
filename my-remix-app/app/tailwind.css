@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .sidebar-container {
+        @apply bg-gradient-to-br from-gray-800 to-gray-900 -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300
+    }
+    .sidebar-nav-btn {
+        @apply font-sans font-bold transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white w-full flex items-center gap-4 px-4 capitalize
+    }
+}
+
+@layer utilities {
+    .sidebar-container.show {
+        @apply translate-x-0
+    }
+    .sidebar-nav-btn.active {
+        @apply bg-gradient-to-tr from-blue-600 to-blue-400 shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85]
+    }
+    .sidebar-nav-btn.pending {
+        @apply hover:bg-white/10 active:bg-white/30
+    }
+}

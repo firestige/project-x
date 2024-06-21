@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新年快乐！</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .firework {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #f00;
+        border-radius: 50%;
+        animation: explode 1s ease-out infinite;
+    }
+    @keyframes explode {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(10);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>新年快乐！</h2>
+    <p>收件人姓名，</p>
+    <p>新年快乐！在这个全新的一年，我衷心地祝愿您和您的家人健康、幸福、和平与欢乐。</p>
+    <p>愿您在2024年里取得更多的成就，充满希望和喜悦。</p>
+    <p>2023年对我们来说是个挑战和机遇并存的一年，感谢您一直以来的支持和信任，让我们共同创造了美好的回忆，也为未来的合作奠定了坚实的基础。在新的一年，我们期待继续携手共进，共同实现更大的成功。</p>
+    <p>值此新春佳节，祝您和您的家人团圆幸福，事业蒸蒸日上，心想事成，万事如意！</p>
+    <p>诚挚地，</p>
+    <p>[你的名字]</p>
+    <!-- Firework Animation -->
+    <div class="firework" style="top: 50px; left: 50px;"></div>
+    <div class="firework" style="top: 100px; left: 200px;"></div>
+    <div class="firework" style="top: 150px; left: 350px;"></div>
+    <!-- Add more fireworks as needed -->
+</div>
+</body>
+</html>
